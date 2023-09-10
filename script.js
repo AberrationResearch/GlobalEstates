@@ -70,3 +70,23 @@ function showMenu() {
 function hideMenu() {
     menu.style.display = "none";
 }
+
+
+// Currency-related variables
+var currency = 0;
+var currencyDisplay = document.getElementById("currency-display"); // Replace with the actual ID of your currency display element
+
+// Update currency every minute (adjust the interval as needed)
+var currencyIncreaseInterval = setInterval(increaseCurrency, 60000); // 60000 milliseconds = 1 minute
+
+// Function to increase currency
+function increaseCurrency() {
+    // Implement logic to increase currency
+    currency += 1; // Increase by 1, adjust as needed
+    updateCurrencyDisplay(); // Update the displayed currency value
+}
+
+// Function to update the displayed currency value on the UI
+function updateCurrencyDisplay() {
+    currencyDisplay.textContent = "Currency: " + currency; // Update the text on your currency display element
+}
